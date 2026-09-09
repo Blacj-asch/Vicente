@@ -1,9 +1,9 @@
-# Vicente
-Hola
+# Vicente Domínguez
+Hola. Buenos días profesor.
 
-¿Qué partes use la IA?
+¿En qué partes use la IA?
 
-Por lo general, use la IA para ayudarme en ciertas partes del CSS y del JS. En su mayoria fue un intercambio, ya que no simplemente intentaba copiar y pegar sino también reescribir lo que le pedía a la IA.
+Por lo general, use la IA para ayudarme en ciertas partes del CSS y del JS. En su mayoria fue un intercambio, ya que no simplemente intentaba copiar y pegar sino también reescribir lo que le pedía a la IA. 
 
 Por ejemplo: (Aquí use IA para ayudarme con el término gap y como influia en la Fletbox(o algo así se llamaba))
   
