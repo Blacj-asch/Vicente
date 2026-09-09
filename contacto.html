@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vicente-Domínguez">
+    <meta name="description" content="Contacto de Vicente-Domínguez">
+    <title>Contacto | Vicente-Domínguez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="site-title" href="index.html">Vicente-Domínguez</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html" aria-current="page">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="finanzas.html">Finanzas</a>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-layout">
+            <section class="contact-column contact-info">
+                <div class="contact-title">
+                    <h1>Contacto</h1>
+                    <p>Estamos para ayudarte con información, consultas o pedidos.</p>
+                </div>
+
+                <div class="contact-block">
+                    <h2>Canales de contacto</h2>
+                    <div class="contact-list">
+                        <div class="contact-line">
+                            <span class="contact-label">Teléfono</span>
+                            <span class="contact-value">+56 9 1234 5678</span>
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-label">Correo</span>
+                            <span class="contact-value">contacto@vicentedominguez.cl</span>
+                        </div>
+                        <div class="contact-line">
+                            <span class="contact-label">Dirección</span>
+                            <span class="contact-value">Av. Principal 123, Santiago, Chile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-block">
+                    <h2>Ubicación</h2>
+                    <div class="map-box">
+                        <iframe title="Mapa de ubicación" src="https://www.openstreetmap.org/export/embed.html?bbox=-70.6608%2C-33.4405%2C-70.6208%2C-33.4105&layer=mapnik&marker=-33.4255%2C-70.6405" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-column contact-login">
+                <section id="contacto-interface" class="inicio_3 contact-panel">
+                    <h1>Consulta</h1>
+                    <p>Si quieres contactarnos o recibir información, puedes realizar una consulta.</p>
+                    <form id="consulta-form" class="consulta-form">
+                        <label class="consulta-opcional">
+                            <input id="quiere-consulta" name="quiere-consulta" type="checkbox">
+                            Quiero realizar una consulta
+                        </label>
+                        <div id="datos-consulta" hidden>
+                            <div class="consulta-campo">
+                                <label for="nombre-consulta">Nombre</label>
+                                <input id="nombre-consulta" name="nombre" type="text">
+                                <p id="nombre-error" class="consulta-error" role="alert"></p>
+                            </div>
+                            <div class="consulta-campo">
+                                <label for="correo-consulta">Correo electrónico</label>
+                                <input id="correo-consulta" name="correo" type="email">
+                                <p id="correo-error" class="consulta-error" role="alert"></p>
+                            </div>
+                            <div class="consulta-campo">
+                                <label for="telefono-consulta">Teléfono</label>
+                                <input id="telefono-consulta" name="telefono" type="text" inputmode="numeric">
+                                <p id="telefono-error" class="consulta-error" role="alert"></p>
+                            </div>
+                            <div class="consulta-campo">
+                                <label for="mensaje-consulta">Consulta</label>
+                                <textarea id="mensaje-consulta" name="mensaje" rows="4"></textarea>
+                                <p id="mensaje-error" class="consulta-error" role="alert"></p>
+                            </div>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+
+                    <details class="admin-access">
+                        <summary>Acceso de administradores</summary>
+                        <form id="login-form" class="login-form">
+                            <label for="usuario">Usuario</label>
+                            <input id="usuario" name="usuario" type="text" required>
+                            <label for="contrasena">Contraseña</label>
+                            <input id="contrasena" name="contrasena" type="password" required>
+                            <button type="submit">Ingresar</button>
+                            <p id="login-mensaje" class="login-message" role="alert"></p>
+                        </form>
+                    </details>
+                </section>
+
+                <section id="admin-panel" class="admin-panel" hidden>
+                    <h1>Panel de Administración</h1>
+                    <div id="pedidos-tabla"></div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+    <footer>
+        <p>&copy; 2026 Liceo Comercial B-72 / UTEM</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1331 @@
+
+p {
+color: #000000;
+text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #173238;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 12px 20px;
+}
+
+.site-title {
+    color: #174d53;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.site-nav a {
+    background-color: #eef3f2;
+    border-radius: 4px;
+    color: #174d53;
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+    background-color: #174d53;
+    color: #ffffff;
+}
+
+h1,
+h2,
+h3 {
+    color: #174d53;
+}
+
+.acasaplatita,
+.marketing-calculator,
+.contact-column,
+.value-card,
+.catalog-card,
+.team-card {
+    border: 1px solid #d8d8d8;
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+.portada {
+    background-color: #eef3f2;
+    border: 1px solid #d8d8d8;
+}
+
+.btn-primary,
+.cta-button,
+.cta-campana,
+.catalog-button,
+.checkout-button {
+    border-radius: 4px;
+}
+
+.marketing-warning {
+    background-color: #fff9d9;
+    border: 1px solid #d6a700;
+    color: #6b5200;
+}
+
+.finance-main {
+    padding: 20px;
+}
+
+.finance-summary,
+.finance-summary-card,
+.finance-cost-list,
+.finance-total {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+
+.contact-main {
+    padding: 24px 18px 40px;
+}
+
+.contact-layout {
+    align-items: stretch;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.contact-column {
+    background-color: #ffffff;
+    border: 1px solid #a9c9c8;
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    padding: 26px;
+}
+
+.contact-info {
+    background-color: #eefbfa;
+}
+
+.contact-title h1 {
+    color: #174d53;
+    font-size: 2rem;
+    margin: 0 0 8px;
+    text-align: left;
+}
+
+.contact-title p {
+    color: #173238;
+    line-height: 1.5;
+}
+
+.contact-block {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-top: 14px;
+    padding: 16px;
+}
+
+.contact-block h2 {
+    color: #174d53;
+    font-size: 1.2rem;
+    margin: 0 0 14px;
+    text-align: left;
+}
+
+.contact-list {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-line {
+    border-bottom: 1px solid #d8f5f1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.contact-line:last-child {
+    border-bottom: none;
+}
+
+.contact-label {
+    color: #174d53;
+    font-weight: bold;
+}
+
+.contact-value {
+    color: #173238;
+}
+
+.map-box {
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    height: 180px;
+    overflow: hidden;
+}
+
+.map-box iframe {
+    border: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-panel {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    max-width: none;
+}
+
+.contact-panel h1 {
+    color: #174d53;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.contact-panel p {
+    color: #173238;
+}
+
+.login-form {
+    display: grid;
+    gap: 8px;
+    margin: 20px auto 0;
+    max-width: 320px;
+}
+
+.consulta-form {
+    display: grid;
+    gap: 8px;
+    margin: 24px auto;
+    max-width: 420px;
+}
+
+.consulta-opcional {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.consulta-form #datos-consulta:not([hidden]) {
+    display: grid;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.consulta-campo {
+    display: grid;
+    gap: 6px;
+}
+
+.consulta-campo label {
+    color: #174d53;
+    font-weight: bold;
+}
+
+.consulta-error {
+    color: #c62828;
+    font-size: 0.9rem;
+    margin: 0;
+    min-height: 18px;
+}
+
+.consulta-form input:not([type="checkbox"]),
+.consulta-form textarea {
+    box-sizing: border-box;
+    border: 1px solid #a9c9c8;
+    border-radius: 4px;
+    font: inherit;
+    padding: 9px;
+    width: 100%;
+}
+
+.consulta-form button {
+    background-color: #28727a;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 2px;
+    padding: 9px 12px;
+    width: 100%;
+}
+
+.consulta-form button:hover,
+.consulta-form button:focus-visible {
+    background-color: #d66f54;
+}
+
+.admin-access {
+    border-top: 1px solid #a9c9c8;
+    margin: 28px auto 8px;
+    max-width: 420px;
+    padding-top: 16px;
+}
+
+.admin-access summary {
+    color: #28727a;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-form input {
+    border: 1px solid #a9c9c8;
+    border-radius: 4px;
+    padding: 9px;
+}
+
+.login-form button {
+    background-color: #28727a;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 9px 12px;
+}
+
+.login-message {
+    color: #c54f3d;
+    min-height: 20px;
+}
+
+.admin-panel {
+    background-color: rgb(255 255 255 / 84%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    margin: 28px auto;
+    max-width: 1050px;
+    padding: 20px;
+}
+
+.orders-table {
+    border-collapse: collapse;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.orders-table th,
+.orders-table td {
+    border: 1px solid #a9c9c8;
+    padding: 10px;
+    text-align: left;
+}
+
+.orders-table th {
+    background-color: #d8f5f1;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-line {
+        justify-content: flex-start;
+    }
+}
+
+.site-header {
+    align-items: center;
+    background-color: #7bd3cd;
+    box-shadow: 0 4px 14px rgb(40 114 122 / 20%);
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    padding: 18px 24px;
+}
+
+.site-title {
+    color: #123f46;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.site-nav a {
+    background-color: #d8f5f1;
+    border: 1px solid #5ab9b5;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgb(10 47 52 / 18%);
+    color: #174d53;
+    display: block;
+    padding: 9px 13px;
+    text-decoration: none;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+    background-color: #ffad91;
+    border-color: #e47d61;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+a {
+    color: #00ffff;
+}
+
+.home-main {
+    padding: 30px 20px 40px;
+}
+
+.portada {
+    background: linear-gradient(135deg, #174d53, #28727a);
+    border-radius: 14px;
+    color: #ffffff;
+    margin: 0 auto 24px;
+    max-width: 1100px;
+    padding: 50px 40px;
+}
+
+.portada-content {
+    max-width: 680px;
+}
+
+.portada-kicker {
+    color: #9cebe5;
+    font-size: 0.83rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.portada h1 {
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.portada-texto {
+    color: #dffafa;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 0 24px;
+}
+
+.portada-acciones {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border-radius: 999px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #ffad91;
+    border: 2px solid #ffad91;
+    color: #174d53;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #d8f5f1;
+    color: #ffffff;
+}
+
+.status-bar {
+    background-color: #174d53;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.status-bar.admin {
+    background-color: #147d54;
+    color: #90ee90;
+}
+
+.status-bar.client {
+    background-color: #ffe8a8;
+    color: #6b5200;
+}
+
+.floating-alert {
+    position: fixed;
+    right: 16px;
+    top: 90px;
+    z-index: 1000;
+    background-color: #fff7d6;
+    border: 1px solid #d6a700;
+    border-radius: 10px;
+    color: #6b5200;
+    box-shadow: 0 12px 24px rgb(0 0 0 / 20%);
+    font-weight: bold;
+    max-width: min(360px, calc(100vw - 32px));
+    padding: 14px 16px;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .site-nav {
+        gap: 8px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .site-nav a {
+        flex: 1 1 120px;
+        min-height: 22px;
+        text-align: center;
+    }
+
+    .home-main {
+        padding: 14px;
+    }
+
+    .portada {
+        padding: 30px 20px;
+    }
+
+    .portada-acciones {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .inicio {
+        margin: 16px 10px;
+        padding: 14px;
+    }
+
+    .team-section {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .catalog-section {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+}
+
+h1 {
+    color: #696969;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+.links {
+    background-color: #008000;
+}
+
+.finance-main {
+    padding: 20px;
+}
+
+.finance-summary {
+    margin: 24px auto;
+    max-width: 900px;
+}
+
+.finance-summary-card {
+    background-color: #ffffff;
+    border: 1px solid #a9c9c8;
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    padding: 24px;
+}
+
+.finance-summary-card h2 {
+    color: #174d53;
+    font-size: 1.6rem;
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.finance-cost-list {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+}
+
+.finance-cost-list li {
+    border-bottom: 1px solid #d8f5f1;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.finance-cost-list li:last-child {
+    border-bottom: none;
+}
+
+.finance-cost-list span {
+    color: #173238;
+}
+
+.finance-cost-list strong {
+    color: #174d53;
+}
+
+.finance-total {
+    border-top: 2px solid #174d53;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.finance-total span:first-child {
+    color: #174d53;
+}
+
+.finance-total span:last-child {
+    color: #d66f54;
+}
+
+.marketing-warning {
+    background-color: #ffe8a8;
+    border-radius: 6px;
+    color: #6b5200;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.cta-campana {
+    background-color: #ffad91;
+    border-radius: 999px;
+    color: #174d53;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.cta-campana:hover,
+.cta-campana:focus-visible {
+    background-color: #d66f54;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .finance-cost-list li,
+    .finance-total {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.catalog-section {
+    margin: 28px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.catalog-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.catalog-header h1 {
+    color: #174d53;
+    font-size: 2.2rem;
+    margin: 0;
+    text-align: left;
+}
+
+.catalog-kicker {
+    color: #d66f54;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.catalog-cta {
+    background-color: #174d53;
+    color: #ffffff;
+}
+
+.catalog-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+}
+
+.catalog-card {
+    background-color: rgb(255 255 255 / 84%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    padding: 18px;
+}
+
+.catalog-card-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-tag {
+    background-color: #d8f5f1;
+    color: #174d53;
+    font-size: 0.76rem;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 999px;
+}
+
+.catalog-price {
+    color: #d66f54;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.catalog-card h2 {
+    color: #174d53;
+    font-size: 1.2rem;
+    margin: 16px 0 8px;
+    text-align: left;
+}
+
+.catalog-card p {
+    color: #173238;
+    line-height: 1.5;
+}
+
+.catalog-card .stock {
+    font-weight: bold;
+}
+
+.catalog-button {
+    background-color: #28727a;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 12px;
+    width: 100%;
+}
+
+.catalog-button:hover,
+.catalog-button:focus-visible {
+    background-color: #d66f54;
+}
+
+.catalog-button:disabled {
+    background-color: #9aaead;
+    cursor: not-allowed;
+}
+
+.transaction-summary {
+    margin: 20px auto 30px;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.transaction-panel {
+    background-color: #ffffff;
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    padding: 24px;
+}
+
+.transaction-panel h2 {
+    color: #174d53;
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: left;
+}
+
+.transaction-items {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.transaction-items span {
+    color: #173238;
+    font-weight: bold;
+}
+
+.checkout-button {
+    background-color: #174d53;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 18px;
+    padding: 11px 20px;
+}
+
+.checkout-button:hover,
+.checkout-button:focus-visible {
+    background-color: #d66f54;
+}
+
+@media (max-width: 600px) {
+    .catalog-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transaction-items {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.software-cta {
+    align-items: center;
+    background-color: #174d53;
+    border-radius: 12px;
+    color: #ffffff;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 28px auto;
+    max-width: 1050px;
+    padding: 24px 30px;
+}
+
+.software-cta-copy {
+    max-width: 680px;
+}
+
+.software-cta-copy h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.software-cta-copy p {
+    color: #dffafa;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cta-button {
+    background-color: #ffad91;
+    border-radius: 999px;
+    color: #174d53;
+    display: inline-block;
+    font-weight: bold;
+    min-width: 180px;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.value-section {
+    margin: 26px auto;
+    max-width: 1050px;
+    padding: 0 20px;
+}
+
+.section-heading h2 {
+    color: #174d53;
+    font-size: 1.7rem;
+    margin-bottom: 14px;
+}
+
+.value-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+}
+
+.value-card {
+    background-color: #ffffff;
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    padding: 18px;
+}
+
+.value-card h3 {
+    color: #174d53;
+    font-size: 1rem;
+    margin: 0 0 10px;
+}
+
+.value-card p {
+    color: #173238;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .software-cta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.inicio {
+    background-color: rgb(255 255 255 / 78%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    padding: 10px;
+    margin: 10px;
+}
+.inicio_2 {
+    background-color: rgb(255 255 255 / 78%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    padding: 10px;
+    margin: 10px;
+}
+.inicio_3 {
+    background-color: rgb(255 255 255 / 78%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    margin: 28px auto;
+    max-width: 620px;
+    padding: 10px;
+}
+
+.about-intro {
+    margin: 28px auto 10px;
+    max-width: 760px;
+    padding: 0 20px;
+    text-align: center;
+}
+.about-intro h1 {
+    color: #174d53;
+    margin-bottom: 8px;
+}
+.about-intro p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+.team-section {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 28px auto;
+    max-width: 1050px;
+    padding: 0 20px;
+}
+.team-card {
+    background-color: rgb(255 255 255 / 84%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    overflow: hidden;
+}
+.team-card-content {
+    padding: 20px;
+}
+.team-card h1,
+.team-card h2,
+.team-card p {
+    margin: 0 0 10px;
+}
+.team-card h1 {
+    color: #174d53;
+    font-size: 1.25rem;
+}
+.team-card h2 {
+    color: #d66f54;
+    font-size: 1rem;
+}
+.team-card p {
+    line-height: 1.5;
+}
+.team-card img {
+    display: block;
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+.about-details {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px auto 28px;
+    max-width: 1050px;
+    padding: 0 20px;
+}
+.about-block {
+    background-color: rgb(255 255 255 / 78%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    padding: 20px;
+}
+.about-block h2 {
+    color: #174d53;
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+}
+.about-block p {
+    line-height: 1.5;
+    margin: 0;
+}
+.acasaplatita,
+.marketing-calculator {
+    background-color: rgb(255 255 255 / 78%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgb(18 63 70 / 12%);
+    margin: 28px auto;
+    max-width: 620px;
+    padding: 20px;
+}
+.marketing-calculator h1 {
+    color: #174d53;
+    margin-top: 0;
+}
+.marketing-form {
+    display: grid;
+    gap: 14px;
+    margin: 22px auto 0;
+    max-width: 420px;
+}
+.marketing-field {
+    display: grid;
+    gap: 6px;
+}
+.marketing-field label {
+    color: #174d53;
+    font-weight: bold;
+}
+.marketing-field input {
+    border: 1px solid #a9c9c8;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: inherit;
+    padding: 9px;
+    width: 100%;
+}
+.marketing-form button {
+    background-color: #28727a;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 12px;
+}
+.marketing-form button:hover,
+.marketing-form button:focus-visible {
+    background-color: #d66f54;
+}
+.marketing-error {
+    color: #c62828;
+    margin: 0;
+    min-height: 20px;
+}
+.marketing-result {
+    background-color: #d8f5f1;
+    border: 1px solid #5ab9b5;
+    border-radius: 5px;
+    color: #174d53;
+    font-weight: bold;
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+}
+.marketing-warning {
+    background-color: #fff3b0;
+    border: 1px solid #d6a700;
+    border-radius: 5px;
+    color: #6b5200;
+    font-weight: bold;
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+}
+.catalog-section {
+    margin: 28px auto;
+    max-width: 1050px;
+    padding: 0 20px;
+}
+.catalog-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.catalog-card {
+    background-color: rgb(255 255 255 / 84%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    padding: 18px;
+}
+.catalog-card h2 {
+    color: #174d53;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+.catalog-card .stock {
+    font-weight: bold;
+}
+.catalog-card button {
+    background-color: #28727a;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 9px 12px;
+}
+.catalog-card button:hover,
+.catalog-card button:focus-visible {
+    background-color: #d66f54;
+}
+.catalog-card button:disabled {
+    background-color: #9aaead;
+    cursor: not-allowed;
+}
+.login-form {
+    display: grid;
+    gap: 8px;
+    margin: 20px auto 0;
+    max-width: 320px;
+}
+.consulta-form {
+    display: grid;
+    gap: 8px;
+    margin: 24px auto;
+    max-width: 420px;
+}
+.consulta-opcional {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    font-weight: bold;
+    justify-content: center;
+}
+.consulta-form #datos-consulta:not([hidden]) {
+    display: grid;
+    gap: 14px;
+    margin-top: 8px;
+}
+.consulta-campo {
+    display: grid;
+    gap: 6px;
+}
+.consulta-campo label {
+    color: #174d53;
+    font-weight: bold;
+}
+.consulta-error {
+    color: #c62828;
+    font-size: 0.9rem;
+    margin: 0;
+    min-height: 18px;
+}
+.consulta-form input:not([type="checkbox"]),
+.consulta-form textarea {
+    box-sizing: border-box;
+    border: 1px solid #a9c9c8;
+    border-radius: 4px;
+    font: inherit;
+    padding: 9px;
+    width: 100%;
+}
+.consulta-form button {
+    background-color: #28727a;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 2px;
+    padding: 9px 12px;
+    width: 100%;
+}
+.consulta-form button:hover,
+.consulta-form button:focus-visible {
+    background-color: #d66f54;
+}
+.admin-access {
+    border-top: 1px solid #a9c9c8;
+    margin: 28px auto 8px;
+    max-width: 420px;
+    padding-top: 16px;
+}
+.admin-access summary {
+    color: #28727a;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+.login-form input {
+    border: 1px solid #a9c9c8;
+    border-radius: 4px;
+    padding: 9px;
+}
+.login-form button {
+    background-color: #28727a;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 9px 12px;
+}
+.login-message {
+    color: #c54f3d;
+    min-height: 20px;
+}
+.admin-panel {
+    background-color: rgb(255 255 255 / 84%);
+    border: 1px solid #a9c9c8;
+    border-radius: 8px;
+    margin: 28px auto;
+    max-width: 1050px;
+    padding: 20px;
+}
+.orders-table {
+    border-collapse: collapse;
+    margin-top: 16px;
+    width: 100%;
+}
+.orders-table th,
+.orders-table td {
+    border: 1px solid #a9c9c8;
+    padding: 10px;
+    text-align: left;
+}
+.orders-table th {
+    background-color: #d8f5f1;
+}
+
+.hola-azul {
+    caret-color: #0000ff;
+    background-color: #d3d3d3;
+}
+.hola-rojo {
+    color: #ff0000;
+    background-color: #d3d3d3;
+}
+@media (max-width: 600px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+    }
+    .site-nav {
+        gap: 8px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .site-nav a {
+        flex: 1 1 120px;
+        min-height: 22px;
+        text-align: center;
+    }
+    .inicio {
+        margin: 16px 10px;
+        padding: 14px;
+    }
+    .team-section {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    .about-details {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    .catalog-section {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+    p {
+        line-height: 1.5;
+    }
+}

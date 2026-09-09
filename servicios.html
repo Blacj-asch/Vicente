@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vicente-Domínguez">
+    <meta name="description" content="Servicios de Vicente-Domínguez">
+    <title>Servicios | Vicente-Domínguez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="site-title" href="index.html">Vicente-Domínguez</a>
+    <nav class="site-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html" aria-current="page">Servicios</a>
+        <a href="finanzas.html">Finanzas</a>
+    </nav>
+</header>
+<main>
+    <section class="catalog-section">
+        <div class="catalog-header">
+            <div>
+                <span class="catalog-kicker">Panel transaccional</span>
+                <h1>Servicios</h1>
+            </div>
+            <a class="cta-button catalog-cta" href="#catalogo">Reservar servicio</a>
+        </div>
+        <div id="catalogo" class="catalog-grid"></div>
+    </section>
+
+    <section class="transaction-summary">
+        <div class="transaction-panel">
+            <h2>Resumen de tu pedido</h2>
+            <div class="transaction-items">
+                <span id="carrito-cantidad">0 servicios</span>
+                <span id="carrito-total">Total: $0</span>
+            </div>
+            <button id="checkout-button" class="checkout-button" type="button">Confirmar compra</button>
+        </div>
+    </section>
+</main>
+<script src="app.js" defer></script>
+<footer>
+        <p>&copy; 2026 Liceo Comercial B-72 / UTEM</p>
+    </footer>
+</body>
+</html>

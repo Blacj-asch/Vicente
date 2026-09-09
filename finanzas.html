@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vicente-Domínguez">
+    <meta name="description" content="Finanzas de Vicente-Domínguez">
+    <title>Finanzas | Vicente-Domínguez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="site-title" href="index.html">Vicente-Domínguez</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="finanzas.html" aria-current="page">Finanzas</a>
+        </nav>
+    </header>
+
+    <main class="finance-main">
+        <section class="acasaplatita">
+            <h1>Finanzas y marketing</h1>
+            <p>En esta sección puedes estimar el presupuesto mensual de una campaña digital.</p>
+        </section>
+
+        <section class="marketing-calculator" aria-labelledby="marketing-title">
+            <h1 id="marketing-title">Calcula tu costo de marketing</h1>
+            <p>Ingresa el costo por clic y la cantidad de clics mensuales esperados.</p>
+            <form id="marketing-form" class="marketing-form">
+                <div class="marketing-field">
+                    <label for="cpc">CPC (Costo por Clic)</label>
+                    <input id="cpc" name="cpc" type="number" min="0" step="0.01" placeholder="Ej: 500" required>
+                </div>
+                <div class="marketing-field">
+                    <label for="clics-mensuales">Clics mensuales esperados</label>
+                    <input id="clics-mensuales" name="clics-mensuales" type="number" min="0" step="1" placeholder="Ej: 1000" required>
+                </div>
+                <button type="submit">Calcular costo</button>
+                <p id="marketing-error" class="marketing-error" role="alert"></p>
+                <p id="marketing-resultado" class="marketing-result" aria-live="polite" hidden></p>
+                <p id="marketing-advertencia" class="marketing-warning" role="alert" hidden></p>
+                <a id="cta-campana" class="cta-campana" href="contacto.html" hidden>Adquirir campaña</a>
+            </form>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+
+    <footer>
+        <p>&copy; 2026 Liceo Comercial B-72 / UTEM</p>
+    </footer>
+</body>
+</html>
